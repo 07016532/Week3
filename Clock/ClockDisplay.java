@@ -7,11 +7,11 @@ public class ClockDisplay {
 	private NumberDisplay second;
 	private String displayString;
 	
-	public ClockDisplay(int hours, int minutes, int seconds){
+	public ClockDisplay(int hours, int minutes, int seconds, int hourlimit){
 		
 		 second = new NumberDisplay(seconds);
 		 minute = new NumberDisplay(minutes);
-		 hour = new NumberDisplay(hours, 23); 
+		 hour = new NumberDisplay(hours, hourlimit); 
 		
 	}
 	
