@@ -2,19 +2,21 @@ package Clock;
 
 public class ClockDisplay {
 	
-	private NumberDisplay hour;
-	private NumberDisplay minute;
-	private NumberDisplay second;
-	private String displayString;
+	private NumberDisplay hour;		//create object name
+	private NumberDisplay minute;	// 	same as above
+	private NumberDisplay second;	//	same as above
+	private String displayString;	
 	
-	public ClockDisplay(int hours, int minutes, int seconds, int hourlimit){
+	//constructor takes our current time parameters from main
+	public ClockDisplay(int hours, int minutes, int seconds, int hourlimit){	
 		
-		 second = new NumberDisplay(seconds);
-		 minute = new NumberDisplay(minutes);
-		 hour = new NumberDisplay(hours, hourlimit); 
+		 second = new NumberDisplay(seconds);	//initialise object with parameters from main as their own parameters
+		 minute = new NumberDisplay(minutes);			// same as above
+		 hour = new NumberDisplay(hours, hourlimit); 	//same as above * note hour limit for 24/12 hour clock is here
 		
 	}
 	
+	//displays the objects created from NumberDisplay class for each obect
 	public void displayClock(){
 		System.out.println(this.hour+":"+this.minute+":"+this.second);
 	}
